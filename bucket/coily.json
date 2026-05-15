@@ -1,0 +1,35 @@
+{
+    "version": "1.5.111",
+    "description": "Operator CLI for Kai's homelab.",
+    "homepage": "https://github.com/coilysiren/coily",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/coilysiren/coily/releases/download/v1.5.111/coily-windows-amd64.exe#/coily.exe",
+            "hash": "4e316a39c290ca7016dcb9bc934de01aa168054942e29be5316f5d7863afaa09"
+        },
+        "arm64": {
+            "url": "https://github.com/coilysiren/coily/releases/download/v1.5.111/coily-windows-arm64.exe#/coily.exe",
+            "hash": "e01cc60521c7b32f05e6cff189e54ea238ba331aa47306ceeaeffa11b18fd3dd"
+        }
+    },
+    "bin": "coily.exe",
+    "checkver": {
+        "github": "https://github.com/coilysiren/coily"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/coilysiren/coily/releases/download/v$version/coily-windows-amd64.exe#/coily.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            },
+            "arm64": {
+                "url": "https://github.com/coilysiren/coily/releases/download/v$version/coily-windows-arm64.exe#/coily.exe",
+                "hash": {
+                    "url": "$url.sha256"
+                }
+            }
+        }
+    }
+}
