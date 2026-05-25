@@ -1,0 +1,17 @@
+# Per-repo command allowlist for scoop-bucket. Sibling to homebrew-tap.
+
+commands: {}
+
+# Catalog metadata for the cross-repo knowledge graph.
+# Schema: coilysiren/agentic-os-kai#420 (tracker).
+catalog:
+  kind: Component
+  type: configuration
+  system: coily-platform
+  owner: kai
+  lifecycle: production
+  description: "Scoop bucket for coilysiren Windows binaries."
+  dependsOn:
+    - coilysiren/coily
+  providesApis:
+    - scoop-manifests

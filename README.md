@@ -17,9 +17,7 @@ scoop update coily
 
 ## Manifests
 
-| name | source repo | notes |
-| ---- | ----------- | ----- |
-| `coily` | [coilysiren/coily](https://github.com/coilysiren/coily) | Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each release. |
+- **`coily`** - [coilysiren/coily](https://github.com/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each release.
 
 ## How autoupdate works
 
@@ -31,3 +29,11 @@ Upstream side of the contract:
 - The release tag must be `v<semver>` (the same shape `mathieudutour/github-tag-action` already produces).
 
 For `coily` that wiring lives at [`coilysiren/coily/.github/workflows/release.yml`](https://github.com/coilysiren/coily/blob/main/.github/workflows/release.yml) (windows-build job).
+
+## See also
+
+- [AGENTS.md](AGENTS.md) - agent-facing operating rules.
+- [docs/FEATURES.md](docs/FEATURES.md) - inventory of what ships today.
+- [.coily/coily.yaml](.coily/coily.yaml) - allowlisted commands.
+
+Cross-reference convention from [coilysiren/agentic-os-kai#313](https://github.com/coilysiren/agentic-os-kai/issues/313).
