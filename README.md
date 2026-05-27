@@ -5,7 +5,7 @@ Scoop bucket for Windows binaries published from `coilysiren/*` repos. Sibling t
 ## Install
 
 ```powershell
-scoop bucket add coilysiren https://github.com/coilysiren/scoop-bucket
+scoop bucket add coilysiren https://forgejo.coilysiren.me/coilysiren/scoop-bucket
 scoop install coily
 ```
 
@@ -17,7 +17,7 @@ scoop update coily
 
 ## Manifests
 
-- **`coily`** - [coilysiren/coily](https://forgejo.coilysiren.me/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each Forgejo release. The bucket repo itself still lives on GitHub (scoop reads it from there), but the binaries it points at are hosted on Forgejo (coily releases moved there in coily#80).
+- **`coily`** - [coilysiren/coily](https://forgejo.coilysiren.me/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each Forgejo release. Both the bucket and the binaries it points at are hosted on Forgejo (coily releases moved there in coily#80).
 
 ## How autoupdate works
 
