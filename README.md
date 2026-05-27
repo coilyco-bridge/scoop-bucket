@@ -17,18 +17,18 @@ scoop update coily
 
 ## Manifests
 
-- **`coily`** - [coilysiren/coily](https://github.com/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each release.
+- **`coily`** - [coilysiren/coily](https://forgejo.coilysiren.me/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each Forgejo release. The bucket repo itself still lives on GitHub (scoop reads it from there), but the binaries it points at are hosted on Forgejo (coily releases moved there in coily#80).
 
 ## How autoupdate works
 
-Each manifest's `autoupdate` block points at `https://github.com/coilysiren/<repo>/releases/download/v$version/<asset>#/<rename>` and reads the SHA256 from the `.sha256` sidecar uploaded alongside the binary. `scoop bucket update` walks the bucket and bumps any manifest whose upstream `checkver` matches.
+Each manifest's `autoupdate` block points at `https://forgejo.coilysiren.me/coilysiren/<repo>/releases/download/v$version/<asset>#/<rename>` and reads the SHA256 from the `.sha256` sidecar uploaded alongside the binary. `scoop bucket update` walks the bucket and bumps any manifest whose upstream `checkver` matches the Forgejo `releases.atom` feed.
 
 Upstream side of the contract:
 
-- The producing repo's `release.yml` must attach `<asset>` and `<asset>.sha256` to the release.
-- The release tag must be `v<semver>` (the same shape `mathieudutour/github-tag-action` already produces).
+- The producing repo's `.forgejo/workflows/release.yml` must attach `<asset>` and `<asset>.sha256` to the release.
+- The release tag must be `v<semver>`.
 
-For `coily` that wiring lives at [`coilysiren/coily/.github/workflows/release.yml`](https://github.com/coilysiren/coily/blob/main/.github/workflows/release.yml) (windows-build job).
+For `coily` that wiring lives at [`coilysiren/coily/.forgejo/workflows/release.yml`](https://forgejo.coilysiren.me/coilysiren/coily/src/branch/main/.forgejo/workflows/release.yml) (`windows-assets` job).
 
 ## See also
 

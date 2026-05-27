@@ -1,31 +1,32 @@
 {
-    "version": "2.29.1",
+    "version": "2.41.0",
     "description": "Operator CLI for Kai's homelab.",
-    "homepage": "https://github.com/coilysiren/coily",
+    "homepage": "https://forgejo.coilysiren.me/coilysiren/coily",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/coilysiren/coily/releases/download/v2.29.1/coily-windows-amd64.exe#/coily.exe",
-            "hash": "e221918f58f51a8ba2beea62eb68aa0140d2e12a8587053c3a202354d04eb4d2"
+            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.41.0/coily-windows-amd64.exe#/coily.exe",
+            "hash": "e663be81733fc24afb265b1f4b4ceec4d7bf97faa7b2fba68bd550ccf9b56aa2"
         },
         "arm64": {
-            "url": "https://github.com/coilysiren/coily/releases/download/v2.29.1/coily-windows-arm64.exe#/coily.exe",
-            "hash": "84e3382694cb8491303a80f73eb8e010c31901dc79e34ab24b003a49af02c58e"
+            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.41.0/coily-windows-arm64.exe#/coily.exe",
+            "hash": "0b4c238dc5748e97e145b7498c6a76c34451f11b2ff3d1aa172edc3a4205a291"
         }
     },
     "bin": "coily.exe",
     "checkver": {
-        "github": "https://github.com/coilysiren/coily"
+        "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases.atom",
+        "regex": "releases/tag/v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/coilysiren/coily/releases/download/v$version/coily-windows-amd64.exe#/coily.exe",
+                "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v$version/coily-windows-amd64.exe#/coily.exe",
                 "hash": {
                     "url": "$url.sha256"
                 }
             },
             "arm64": {
-                "url": "https://github.com/coilysiren/coily/releases/download/v$version/coily-windows-arm64.exe#/coily.exe",
+                "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v$version/coily-windows-arm64.exe#/coily.exe",
                 "hash": {
                     "url": "$url.sha256"
                 }
