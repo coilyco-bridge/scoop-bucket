@@ -12,6 +12,4 @@ catalog:
   lifecycle: production
   description: "Scoop bucket for coilysiren Windows binaries."
   dependsOn:
-    - coilysiren/coily
-  providesApis:
-    - scoop-manifests
+    - forgejo.coilysiren.me/coilysiren/coily
