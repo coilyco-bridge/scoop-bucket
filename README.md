@@ -18,6 +18,7 @@ scoop update coily
 ## Manifests
 
 - **`coily`** - [coilysiren/coily](https://forgejo.coilysiren.me/coilysiren/coily). Operator CLI. Pulls prebuilt `coily-windows-<arch>.exe` from each Forgejo release. Both the bucket and the binaries it points at are hosted on Forgejo (coily releases moved there in coily#80).
+- **`repo-recall`** - [coilysiren/repo-recall](https://forgejo.coilysiren.me/coilysiren/repo-recall). Local hydration layer (git + gh + Claude Code sessions over JSON + MCP). Pulls `repo-recall-windows-amd64.exe` from each **Forgejo** release. On install it registers a per-user `AtLogOn` scheduled task that runs the binary in your session on `127.0.0.1:7887` (the default 7777 is left free for a WSL instance); uninstall removes the task. No admin or password (per-user task, not a Windows service).
 
 ## How autoupdate works
 
