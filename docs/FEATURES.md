@@ -4,7 +4,7 @@ Baseline inventory of what `coilysiren/scoop-bucket` ships today. Update when a 
 
 ## Manifests
 
-Bucket installed via `scoop bucket add coilysiren https://github.com/coilysiren/scoop-bucket`. Individual manifests installed with `scoop install coilysiren/<name>`.
+Bucket installed via `scoop bucket add coilysiren https://github.com/coilyco-bridge/scoop-bucket`. Individual manifests installed with `scoop install coilysiren/<name>`.
 
 - **[bucket/coily.json](../bucket/coily.json)** - tracks `coilysiren/coily` releases. Pulls the prebuilt `coily-windows-<arch>.exe` from each tag. Operator CLI for the homelab.
 - **[bucket/repo-recall.json](../bucket/repo-recall.json)** - tracks `coilysiren/repo-recall` Forgejo releases. Pulls `repo-recall-windows-amd64.exe`, then `post_install` registers a per-user `AtLogOn` scheduled task that runs the binary in Kai's session on `127.0.0.1:7887` (default 7777 left free for WSL). `pre_uninstall` unregisters it. No admin or password (per-user task, not a Windows service).
@@ -24,4 +24,4 @@ Upstream-side contract:
 - [AGENTS.md](../AGENTS.md) - agent-facing operating rules.
 - [.coily/coily.yaml](../.coily/coily.yaml) - allowlisted commands.
 
-Cross-reference convention from [coilysiren/agentic-os-kai#313](https://github.com/coilysiren/agentic-os-kai/issues/313).
+Cross-reference convention from [coilysiren/agentic-os-kai#313](https://github.com/coilyco-bridge/agentic-os-kai/issues/313).
