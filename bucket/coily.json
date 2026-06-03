@@ -1,15 +1,15 @@
 {
-    "version": "2.41.0",
+    "version": "2.52.0",
     "description": "Operator CLI for Kai's homelab.",
     "homepage": "https://forgejo.coilysiren.me/coilysiren/coily",
     "architecture": {
         "64bit": {
-            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.41.0/coily-windows-amd64.exe#/coily.exe",
-            "hash": "e663be81733fc24afb265b1f4b4ceec4d7bf97faa7b2fba68bd550ccf9b56aa2"
+            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.52.0/coily-windows-amd64.exe#/coily.exe",
+            "hash": "56fc0bbb468914db8e5d2e5893f6cb4ef1eb843fbee7fc3d80f41e181060c24b"
         },
         "arm64": {
-            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.41.0/coily-windows-arm64.exe#/coily.exe",
-            "hash": "0b4c238dc5748e97e145b7498c6a76c34451f11b2ff3d1aa172edc3a4205a291"
+            "url": "https://forgejo.coilysiren.me/coilysiren/coily/releases/download/v2.52.0/coily-windows-arm64.exe#/coily.exe",
+            "hash": "89d1a68f0008d639e9c37d61f4259657d06d1fae85a2672a0f942bf7026cb93d"
         }
     },
     "bin": "coily.exe",
